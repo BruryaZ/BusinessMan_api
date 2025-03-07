@@ -13,6 +13,7 @@ namespace BusinessMan.Data.Repositories
         IRepository<User> User { get; }
         IRepository<Invoice> Invoice { get; }
         IRepository<Business> Business { get; }
+        IRepository<Example> Examples { get; }
         Task SaveAsync();
     }
 }

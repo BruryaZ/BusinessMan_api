@@ -26,6 +26,7 @@ namespace BusinessMan.Data.Repositories
         public async Task DeleteAsync(T entity)
         {
             _dbSet.Remove(entity);
+            await Task.CompletedTask;
         }
 
         public async Task<IEnumerable<T>> GetAllAsync()
@@ -41,6 +42,7 @@ namespace BusinessMan.Data.Repositories
         public async Task<T> UpdateAsync(int id, T entity)
         {
             _dbSet.Update(entity);
+            await Task.CompletedTask; // כדי לחכות לשמירה בבסיס הנתונים
             return entity;
         }
     }
